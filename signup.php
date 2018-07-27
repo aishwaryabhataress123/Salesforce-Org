@@ -56,8 +56,8 @@
 				<input type="text" name="emailid" placeholder="Email Id" class="credentials" style="margin-top:5%;">
 				<input type="password" name="password" placeholder="Password" class="credentials" style=" margin-top:5%;">
 				<input type="password" name="repassword" placeholder="Re-enter Password" class="credentials" style=" margin-top:5%;">
-				<form action="signin.php">
-					<button type="submit" name="submit" class="credentials" action="index.php" style="margin-top:5%; text-align:center; background-color:#04C5F9; color:white;"> Sign Up </button>				
+				<form action="index.php">
+					<button type="submit" name="submit" class="credentials" style="margin-top:5%; text-align:center; background-color:#04C5F9; color:white;"> Sign Up </button>				
 				</form>
 			</div>
 		</div>
