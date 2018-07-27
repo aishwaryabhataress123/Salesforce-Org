@@ -8,7 +8,7 @@
 			align:center;
 			background-color:white; 
 			border: 2px solid white; 
-			border-radius:100px;
+			border-radius:40px;
 			margin-left:auto;
 			margin-right:auto;
 			margin-top:50px;
@@ -48,15 +48,14 @@
 				<input type="text" name="lastname" placeholder="Last Name" class="credentials" style="margin-top:5%;">
 				<input type="number" name="phonenumber" placeholder="Phone Number" class="credentials" style="margin-top:5%;">
 				<input type="number" name="mobilenumber" placeholder="Mobile Number" class="credentials" style="margin-top:5%;">
-				<input type="text" name="street" placeholder="Street" class="credentials" style="margin-top:5%;">
-				<input type="text" name="city" placeholder="City" class="credentials" style="margin-top:5%;">
+				<input type="textarea" name="address" placeholder="Address" class="credentials" style="margin-top:5%;">				
 				<input type="number" name="zipcode" placeholder="Zip Code" class="credentials" style="margin-top:5%;">
 				<input type="text" name="state" placeholder="State" class="credentials" style="margin-top:5%;">
 				<input type="text" name="country" placeholder="Country" class="credentials" style="margin-top:5%;">
 				<input type="text" name="verificationcode" placeholder="Verification Code" class="credentials" style="margin-top:5%;">
 				<input type="text" name="emailid" placeholder="Email Id" class="credentials" style="margin-top:5%;">
 				<input type="password" name="password" placeholder="Password" class="credentials" style=" margin-top:5%;">
-				<input type="repassword" name="repassword" placeholder="Re-enter Password" class="credentials" style=" margin-top:5%;">
+				<input type="password" name="repassword" placeholder="Re-enter Password" class="credentials" style=" margin-top:5%;">
 				<form action="signin.php">
 					<button type="submit" name="submit" class="credentials" action="index.php" style="margin-top:5%; text-align:center; background-color:#04C5F9; color:white;"> Sign Up </button>				
 				</form>
