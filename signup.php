@@ -57,7 +57,7 @@
 				<input type="password" name="password" placeholder="Password" class="credentials" style=" margin-top:5%;">
 				<input type="repassword" name="repassword" placeholder="Re-enter Password" class="credentials" style=" margin-top:5%;">
 				<form action="signin.php">
-					<button type="submit" name="submit" class="credentials" action="signin.php" style="margin-top:5%; text-align:center; background-color:#04C5F9; color:white;"> Sign Up </button>				
+					<button type="submit" name="submit" class="credentials" action="index.php" style="margin-top:5%; text-align:center; background-color:#04C5F9; color:white;"> Sign Up </button>				
 				</form>
 			</div>
 		</div>
