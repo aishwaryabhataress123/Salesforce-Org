@@ -48,7 +48,8 @@
 				<input type="text" name="lastname" placeholder="Last Name" class="credentials" style="margin-top:5%;">
 				<input type="number" name="phonenumber" placeholder="Phone Number" class="credentials" style="margin-top:5%;">
 				<input type="number" name="mobilenumber" placeholder="Mobile Number" class="credentials" style="margin-top:5%;">
-				<input type="textarea" name="address" placeholder="Address" class="credentials" style="margin-top:5%;">				
+				<input type="text" name="street" placeholder="Street" class="credentials" style="margin-top:5%;">
+				<input type="text" name="city" placeholder="City" class="credentials" style="margin-top:5%;">
 				<input type="number" name="zipcode" placeholder="Zip Code" class="credentials" style="margin-top:5%;">
 				<input type="text" name="state" placeholder="State" class="credentials" style="margin-top:5%;">
 				<input type="text" name="country" placeholder="Country" class="credentials" style="margin-top:5%;">
