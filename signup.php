@@ -47,7 +47,7 @@
 			<img src="https://image3.mouthshut.com/images/imagesp/925609709s.jpg" alt="Aress Picture" style="height:90px;width:200px;">
 		</div>
 		<div class="inner-container">
-		<form action="signin.php" method="post">
+		<form action="index.php" method="post">
 			<input type="text" name="firstname" placeholder="First Name" class="credentials" value="<?php echo $firstname;?>">
 			<input type="text" name="lastname" placeholder="Last Name" class="credentials" style="margin-top:5%;" value="<?php echo $lastname;?>">
 			<input type="number" name="phonenumber" placeholder="Phone Number" class="credentials" style="margin-top:5%;" value="<?php echo $phonenumber;?>">
