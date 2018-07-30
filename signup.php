@@ -74,6 +74,6 @@
   		echo "An error occurred.\n";
   		exit;	
 	}
-	$query = "INSERT INTO salesforce.user(FirstName, LastName, Alias, CommunityNickname, phone, mobilephone, street, city, postalcode, state, country, email, TimeZoneSidKey, LocaleSidKey,EmailEncodingKey, ProfileId, LanguageLocaleKey, Username, password__c) VALUES('$_POST[firstname]','$_POST[lastname]','asdf','qqwer','$_POST[phonenumber]', '$_POST[mobilenumber]', '$_POST[street]', '$_POST[city]', '$_POST[zipcode]', '$_POST[state]', '$_POST[country]', '$_POST[emailid]', 'America/LA', 'English(United States)', 'General US and Western Europe', 'Service cloud', 'English', '$_POST[emailid]', '$_POST[password]');";
+	$query = "INSERT INTO salesforce.user(FirstName, LastName, Alias, CommunityNickname, phone, mobilephone, street, city, postalcode, state, country, email, TimeZoneSidKey, LocaleSidKey,EmailEncodingKey, ProfileId, LanguageLocaleKey, Username, password__c) VALUES('$_POST[firstname]','$_POST[lastname]','asdf','qqwer','$_POST[phonenumber]', '$_POST[mobilenumber]', '$_POST[street]', '$_POST[city]', '$_POST[zipcode]', '$_POST[state]', '$_POST[country]', '$_POST[emailid]', '(GMT-07:00) Pacific Daylight Time (America/Los_Angeles)', 'English(United States)', 'General US and Western Europe', 'Service cloud', 'English', '$_POST[emailid]', '$_POST[password]');";
 	$result= pg_query($query);
 ?>
