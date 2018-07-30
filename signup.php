@@ -74,6 +74,6 @@
   		echo "An error occurred.\n";
   		exit;	
 	}
-	$query = "INSERT INTO salesforce."user"(firstname, lastname, phone, mobilephone, street, city, postalcode, state, country, email, password__c) VALUES('$_POST[firstname]','$_POST[lastname]','$_POST[phonenumber]', '$_POST[mobilenumber]', '$_POST[street]', '$_POST[city]', '$_POST[zipcode]', '$_POST[state]', '$_POST[country]', '$_POST[emailid]', '$_POST[password]');";
+	$query = "INSERT INTO salesforce.user(firstname, lastname, phone, mobilephone, street, city, postalcode, state, country, email, password__c) VALUES('$_POST[firstname]','$_POST[lastname]','$_POST[phonenumber]', '$_POST[mobilenumber]', '$_POST[street]', '$_POST[city]', '$_POST[zipcode]', '$_POST[state]', '$_POST[country]', '$_POST[emailid]', '$_POST[password]');";
 	$result= pg_query($query);
 ?>
