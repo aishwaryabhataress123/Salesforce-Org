@@ -40,7 +40,7 @@
 </style>
 <body style="background-color:#04C5F9">
 	<?php
-	$firstname = $lastname = $phonenumber = $mobilenumber = $street = $city = $zipcode = $state = $country = $verification = $emailid = $password = $repassword = "";
+	$firstname = $lastname = $alias = $nickname = $phonenumber = $mobilenumber = $street = $city = $zipcode = $state = $country = $verification = $emailid = $timezone = $password = $repassword = "";
 	?>
 		<div class="container">
 		<div class="signin">
@@ -50,6 +50,8 @@
 		<form action="index.php" method="post">
 			<input type="text" name="firstname" placeholder="First Name" class="credentials" value="<?php echo $firstname;?>">
 			<input type="text" name="lastname" placeholder="Last Name" class="credentials" style="margin-top:5%;" value="<?php echo $lastname;?>">
+			<input type="text" name="alias" placeholder="Alias" class="credentials" style="margin-top:5%;" value="<?php echo $alias;?>">
+			<input type="text" name="nickname" placeholder="Nickname" class="credentials" style="margin-top:5%;" value="<?php echo $nickname;?>">
 			<input type="number" name="phonenumber" placeholder="Phone Number" class="credentials" style="margin-top:5%;" value="<?php echo $phonenumber;?>">
 			<input type="number" name="mobilenumber" placeholder="Mobile Number" class="credentials" style="margin-top:5%;" value="<?php echo $mobilenumber;?>">
 			<input type="text" name="street" placeholder="Street" class="credentials" style="margin-top:5%;" value="<?php echo $street;?>">
@@ -59,10 +61,24 @@
 			<input type="text" name="country" placeholder="Country" class="credentials" style="margin-top:5%;" value="<?php echo $country;?>">
 			<input type="text" name="verificationcode" placeholder="Verification Code" class="credentials" style="margin-top:5%;" value="<?php echo $verificationcode;?>">
 			<input type="text" name="emailid" placeholder="Email Id" class="credentials" style="margin-top:5%;" value="<?php echo $emailid;?>">
+			<select class="credentials" name="timezone" style="margin-top:5%;" value="timezone">
+				<option value="(GMT-07:00) Pacific Daylight Time (America/Los_Angeles)">(GMT-07:00) Pacific Daylight Time (America/Los_Angeles)</option>
+			</select>
+			<select class="credentials" name="locale" style="margin-top:5%;" value="locale">
+				<option value="English(United States)">English(United States)</option>
+			</select>
+			<select class="credentials" name="language" style="margin-top:5%;" value="language">
+				<option value="English">English</option>
+			</select>
+			<select class="credentials" name="emailEncoding" style="margin-top:5%;" value="emailEncoding">
+				<option value="General US & Western Europe (ISO-8859-1, ISO-LATIN-1)">General US & Western Europe (ISO-8859-1, ISO-LATIN-1)</option>
+			</select>
+			<input type="hidden" name="profileId" value="00e1J0000017aBdQAI">
+			<input type="text" name="username" placeholder="Username" class="credentials" style="margin-top:5%;" value="<?php echo $username;?>">
 			<input type="password" name="password" placeholder="Password" class="credentials" style=" margin-top:5%;" value="<?php echo $password;?>">
 			<input type="password" name="repassword" placeholder="Re-enter Password" class="credentials" style=" margin-top:5%;" value="<?php echo $repassword;?>">
 			
-			<button type="submit" name="submit" class="credentials" action="signin.php" style="margin-top:5%; text-align:center; background-color:#04C5F9; color:white;"> Sign Up </button>				
+			<button type="submit" name="submit" class="credentials" style="margin-top:5%; text-align:center; background-color:#04C5F9; color:white;"> Sign Up </button>				
 		</form>
 		</div>
 	</div>
@@ -74,6 +90,6 @@
   		echo "An error occurred.\n";
   		exit;	
 	}
-	$query = "INSERT INTO salesforce.user(FirstName, LastName, Alias, CommunityNickname, phone, mobilephone, street, city, postalcode, state, country, email, TimeZoneSidKey, LocaleSidKey,EmailEncodingKey, ProfileId, LanguageLocaleKey, Username, password__c) VALUES('$_POST[firstname]','$_POST[lastname]','asdf','qqwer','$_POST[phonenumber]', '$_POST[mobilenumber]', '$_POST[street]', '$_POST[city]', '$_POST[zipcode]', '$_POST[state]', '$_POST[country]', '$_POST[emailid]', '(GMT-07:00) Pacific Daylight Time (America/Los_Angeles)', 'English(United States)', 'General US and Western Europe', 'Service cloud', 'English', '$_POST[emailid]', '$_POST[password]');";
+	$query = "INSERT INTO salesforce."user"(FirstName, LastName, Alias, CommunityNickname, phone, mobilephone, street, city, postalcode, state, country, email, TimeZoneSidKey, LocaleSidKey,EmailEncodingKey, ProfileId, LanguageLocaleKey, Username, password__c) VALUES('$_POST[firstname]','$_POST[lastname]','$_POST[alias]','$_POST[nickname]','$_POST[phonenumber]', '$_POST[mobilenumber]', '$_POST[street]', '$_POST[city]', '$_POST[zipcode]', '$_POST[state]', '$_POST[country]', '$_POST[emailid]', '$_POST[timezone]', '$_POST[locale]', '$_POST[emailencoding]' , '$_POST[profileId]', '$_POST[language]', '$_POST[username]', '$_POST[password]');";
 	$result= pg_query($query);
 ?>
