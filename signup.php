@@ -90,6 +90,6 @@
   		echo "An error occurred.\n";
   		exit;	
 	}
-	$query = "INSERT INTO salesforce.user(FirstName, LastName, Alias, CommunityNickname, Phone, MobilePhone, Street, City, PostalCode, State, Country, Email, TimeZoneSidKey, LocaleSidKey, EmailEncodingKey, ProfileId, LanguageLocaleKey, Username, Password__c) VALUES('$_POST[firstname]','$_POST[lastname]','$_POST[alias]','$_POST[nickname]','$_POST[phonenumber]', '$_POST[mobilenumber]', '$_POST[street]', '$_POST[city]', '$_POST[zipcode]', '$_POST[state]', '$_POST[country]', '$_POST[emailid]', '$_POST[timezone]', '$_POST[locale]', '$_POST[emailencoding]' , '$_POST[profileId]', '$_POST[language]', '$_POST[username]', '$_POST[password]');";
+	$query = "INSERT INTO salesforce.user(FirstName, LastName, Alias, Nickname, Phone, Mobile, Street, City, PostalCode, State, Country, Email, TimeZone, Locale, EmailEncoding, ProfileID, Language, Username, Password) VALUES('$_POST[firstname]','$_POST[lastname]','$_POST[alias]','$_POST[nickname]','$_POST[phonenumber]', '$_POST[mobilenumber]', '$_POST[street]', '$_POST[city]', '$_POST[zipcode]', '$_POST[state]', '$_POST[country]', '$_POST[emailid]', '$_POST[timezone]', '$_POST[locale]', '$_POST[emailencoding]' , '$_POST[profileId]', '$_POST[language]', '$_POST[username]', '$_POST[password]');";
 	$result= pg_query($query);
 ?>                                                        
