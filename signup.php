@@ -3,7 +3,7 @@
 </head>
 <style>
 	.container{
-		height:750px; 
+		height:650px; 
 		width:400px; 
 		align:center;
 		background-color:white; 
